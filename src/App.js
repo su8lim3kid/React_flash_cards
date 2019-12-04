@@ -18,7 +18,7 @@ addCard = (cardData) =>{
   let card = {id: this.getId(),...cardData}
   this.setState({cards: [card,...this.state.cards],})
 }
-
+// under construction trying to figure out how to hide answer //
 toggleAnswer= () => this.setState({showAnswer: !this.state.showAnswer,})
 
 

@@ -21,7 +21,7 @@ const Cards = ({ cards }) => (
             <Table.Row key={card.id}>
               <Table.Cell>{card.front}</Table.Cell>
               <Table.Cell style={{ width: "10%",}} >
-               
+               {/* my flip button to toggle answer is not working yet */}
                 <Button color="blue">
                 flip
                 </Button>

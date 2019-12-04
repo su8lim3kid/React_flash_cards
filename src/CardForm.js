@@ -8,8 +8,7 @@ class CardForm extends React.Component {
     e.preventDefault();
     this.props.add(this.state)
     this.setState({front: "", answer: "",})
-    // Call a function to add a contact to state
-    // Where should this function be defined???
+  
   }
 
   handleChange = (e) => {
