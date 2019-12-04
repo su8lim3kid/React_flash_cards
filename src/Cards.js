@@ -3,7 +3,7 @@ import React from 'react';
 import { Button, Table } from "semantic-ui-react";
 
 
-const Cards = ({ cards }) => (
+const Cards = ({ cards, remove}) => (
   
   
     <Table celled padded>
@@ -27,8 +27,17 @@ const Cards = ({ cards }) => (
                 </Button>
               </Table.Cell>
               <Table.Cell>{card.answer}</Table.Cell>
+              <Table.Cell style={{ width: "10%",}} >
+              <Button color="red">
+                Delete
+              </Button>
+              </Table.Cell>
              
             </Table.Row> 
+            // cards.map(card=> (
+            //   <card key={card.id}{...card} remove={remove} />
+
+           
           ))
         }
       </Table.Body>

@@ -19,9 +19,15 @@ addCard = (cardData) =>{
   this.setState({cards: [card,...this.state.cards],})
 }
 // under construction trying to figure out how to hide answer //
-toggleAnswer= () => this.setState({showAnswer: !this.state.showAnswer,})
+// toggleAnswer= () => this.setState({showAnswer: !this.state.showAnswer,})
 
-
+removeCard= (id) =>{
+  const cards = this.state.cards.filter( card =>{
+    if (cards.id !== id)
+    return card
+  })
+  this.setState({cards: [...cards],})
+}
 
   render(){
     return(
@@ -39,7 +45,8 @@ toggleAnswer= () => this.setState({showAnswer: !this.state.showAnswer,})
       </Container>
       
         
-        <Cards cards={this.state.cards}  />
+        <Cards cards={this.state.cards} remove={this.removecard} />
+        
         
         
 
